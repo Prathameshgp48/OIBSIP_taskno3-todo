@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  background: rgb(128, 207, 233);
+  padding: 20px;
+}
+
+.section {
+  width: 30%;
+  padding: 10px;
+}
+
+.add {
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 100px 0;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c5d0e7;
+  border-radius: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+  font-size: 1rem;
+}
+
+.plus {
+  border: none;
+  outline: none;
+  padding: 16px 40px;
+  background-color: lightseagreen;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.remove{
+  border: none;
+  outline: none;
+  padding: 16px 40px;
+  background-color: lightseagreen;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.plus:hover {
+  background-color: rgb(122, 237, 232);
+}
+
+.list li,
+.complete li {
+  height: 60px;
+  width: 400px;
+  font-size: 1.2rem;
+  background-color: #fff;
+  margin: 20px 0;
+  cursor: pointer;
+  padding-left: 65px;
+  border-radius: 30px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.complete li.checked::before {
+  background-image: url(./assets/checked.png);
+}
+
+.complete li::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-image: url(./assets/unchecked.jpeg);
+  background-size: cover;
+  top: 12px;
+  left: 20px;
+}
+
+.complete li.checked {
+  text-decoration: line-through;
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-image: url(./assets/unchecked.jpeg);
+  background-size: cover;
+  top: 12px;
+  left: 20px;
+}
+
+.list li.checked::before {
+  background-image: url(./assets/checked.png);
+}
+
+.list li img,
+.complete li img {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-image: url(./assets/delete.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  right: 20px;
+}
+
+.list li.checked {
+  text-decoration: line-through;
+}

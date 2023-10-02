@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+      </style>
+      
+  </head>
+  <body>
+    <div class="container">
+      <div class="section add">
+        
+        <h2>Add ToDos</h2>
+        <div class="todo">
+          <input
+            id="input"
+            type="text"
+            name="todo"
+            placeholder="Add Task"
+            autocomplete="off"
+          />
+          <button class="plus" onclick="addTask()">Add</button>
+        </div>
+        <button class="remove" onclick="removeTask()">Remove All</button>
+      </div>
+
+      <div class="section">
+        <h2>Task List</h2>
+        <ul class="list"></ul>
+      </div>
+      <div class="section">
+        <h2>Completed Tasks</h2>
+        <ul class="complete"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
