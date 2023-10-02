@@ -10,6 +10,10 @@ function addTask() {
     let img = document.createElement("img");
     img.src = "./assets/delete.png";
     li.innerHTML = input.value;
+    li.setAttribute("contenteditable", "true");
+    li.addEventListener("blur", () => {
+      li.removeAttribute("contenteditable");
+    });
     console.log(li);
     input.value = "";
     list.appendChild(li);
